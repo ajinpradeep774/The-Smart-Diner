@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-US">
+ <meta charset ="UTF-8">
+ <head>
+
+  <link rel="icon" href="img/app logo.ico" >
+  <title> The smart Diner</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css" >
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+  <script  type="text/javascript" language="javascript" src="js/myscript.js"></script>
+  <script src="js/gamp.js"     type="text/javascript"></script> 
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Dynalight' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Exo+2' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/jquery.interactive_bg.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Philosopher' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Boogaloo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lemon' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="js/jquery-2.2.1.js"></script>
+  <script src="../file/js/modernizr.js"></script>
+   <style>
+
+   #smart {background-image: url("img/bgg.jpg");
+    background-size: 1368px 700px;
+    background-repeat: no-repeat; 
+    margin-left:-8px;
+     }
+
+
+
+		
+  </style>
+ 
+</head>
+
+<body>
+
+<div id="loading"></div>
+<div id="content">
+
+<div id="header">
+  <ul>
+    <li> <a class="active" href="#smart"><img src="img/home-md.png" width="30px" height="20px" ></a> </li>
+    <li> <a href="#CONTACT" style=" font-family: 'Exo 2', sans-serif;">Contact</a></li>
+    <ul style="float:right;list-style-type:none; margin-left: 935px">
+       <li> <a href="#" onclick="return false;" onmousedown="autoScrollTo('ABOUT');" style=" font-family: 'Exo 2', sans-serif;" >About</a></li>
+       <li> <a href="#" onclick="return false;" onmousedown="autoScrollTo('container');" style=" font-family: 'Exo 2', sans-serif;" >Sign in </a> </li>
+       <li> <a href="#" onclick="return false;" onmousedown="autoScrollTo('container2');" style=" font-family: 'Exo 2', sans-serif;">Sign up </a></li> 
+    </ul>
+  </ul>
+ <script type="text/javascript">
+   var scrollY=0;
+   var distence=40;
+   var speed=24;
+   function autoScrollTo(el)
+        {
+            var currentY=window.pageYOffset;
+            var targetY=document.getElementById(el).offsetTop;
+            var bodyHeight=document.body.offsetHeight;
+            var yPos=currentY + window.innerHeight;
+            var animator=setTimeout('autoScrollTo(\''+el+'\')',24 );
+            if(yPos>bodyHeight){ clearTimeout(animator);}
+            else{
+              if(currentY <(targetY-distence))
+              {
+                scrollY=scrollY+distence;
+                window.scroll(0,scrollY);
+              }
+              else
+              {
+                clearTimeout(animator);
+              }
+            }
+        }           
+        
+ </script>
+   
+</div>  
+<div class="background-wrap">
+   <video id="video-bg-element" preload="auto" autoplay="true" loop="loop" muted="muted">
+   	 <source src="media/myfood.mp4" type="video/mp4">
+   </video>
+
+<div id="smart" class="content">
+  <h2 id="welcome" > Welcome to...</h2>
+   <h1 id="head" >THE SMART DINER </h1> 
+   
+   <p id="logo"> A PERFECT RESTAURANT RESERVATION SITE</p>
+   <br><br><br><br><br><br>
+  
+  </div>
+  </div>
+ 
+ <div id="container" class="win2">
+ <h3 class="sign"> Sign In</h3><br>
+   <div class="signin" >
+		<form action="google.php">          
+			<span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Username</span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span>
+        <span class="input input--nao">
+          <input class="input__field input__field--nao" type="password" id="input-2" />
+          <label class="input__label input__label--nao" for="input-2">
+            <span class="input__label-content input__label-content--nao">Password</span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span>
+			<span id="forget" ><a href="forget.html" target="_blank" >Forget password?</a></span><br>
+      <input type="checkbox" id ="reminder" checked ><span class="rem">Remember for this computer</span></input><br>
+			<!-- <span id="uplink"><a href="#container2"> Register Your Restaurant?</a></span><br> -->
+			<input class="butn" type="submit" id="signIn23" value="Sign in" formaction="google.php"><br>
+    </form>
+
+	</div>	
+</div>	
+<div id="container2" class="win3">
+  <h3 class="sign"> Register Your Restaurant </h3><br>
+   <div class="signup"> 
+	<form name="reg" action="google.php" method="get" autocomplete="on" onsubmit="return validation()" >
+
+  <span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" name="rest_name"  required />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Restaurant Name </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+	<!-- <label class="lab">Restaurant Name </label> <span class="star" > * </span>  :<br>
+	<input type="text" class="exf2" name="rest_name"  required ><br>
+	 -->
+   <span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" name="country_name" onfocus="this.value='India'" readonly  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Country  </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+   <!-- <label class="lab">Country </label><span class="star" > * </span>  :<br>
+	<input type="text" class="exf2" name="country_name" value="India" readonly ><br> -->
+  <span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" name="country_name" onfocus="this.value='Kerala'" readonly  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">State  </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+	<!-- <label class="lab">State </label><span class="star" > * </span>  :<br>
+	<select name="state_name" class="exf2">
+		<option value="kerala" selected>Kerala</option>
+ 	    <option value="tamilnadu">Tamilnadu</option>
+        <option value="karnadaka">karnadaka</option>
+        <option value="goa">Goa</option>
+		
+	</select>
+	<br> -->
+  <span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" name="city_name" required title="Sequence of charecters only"  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">City  </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+	<!-- <label class="lab" >City </label> <span class="star" > * </span>  :<br>
+	<input type="text" class="exf2" name="city_name" required title="Sequence of charecters only"><br> -->
+  <span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" name="addrs" required  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Address  </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span>
+        <span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" name="addrs" required  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao"> </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span>
+        <span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" name="addrs"  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao"> </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+	<!-- <label class="lab">Address </label> <span class="star" > * </span>  :<br>
+	<textarea rows="10" cols="40" class="exf2" required></textarea><br> -->
+  <span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" min="600000" max="699999" maxlength="6" pattern="6+[0-9]{5}" title="6 digit code,Starts with 6"  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">PIN  </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+	<!-- <label class="lab">PIN </label> <span class="star" > * </span>  :<br>
+	<input type="text" class="exf2" min="600000" max="699999" maxlength="6" pattern="6+[0-9]{5}" title="6 digit code,Starts with 6"><br><br>
+	 -->
+   <span class="input input--nao">
+          <input class="input__field input__field--nao" type="tel" id="input-1" name="phone_num" maxlength="10" pattern="[0-9]{10}" title="Enter 10 digit mobile number" required  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Phone(+91)  </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+	<!-- <label class="lab">Phone </label><br>
+	<input type="tel"  value="+91" size="3" readonly> <input type="email" class="exf2" name="phone_num" maxlength="10" pattern="[0-9]{10}" title="Enter 10 digit mobile number"><br> -->
+  <span class="input input--nao">
+          <input class="input__field input__field--nao" type="email" id="input-1" name="email_id" maxlength="50" size="50" required  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">E-mail </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+	<!-- <label class="lab">E-mail</label> <span class="star" > * </span> :<br>
+	<input type="email" class="exf2" name="email_id" maxlength="50" size="50"><br>
+	 -->
+   <span class="input input--nao">
+          <input class="input__field input__field--nao" type="web" id="input-1" name="email_id" maxlength="50" size="50" required  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Web </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+   <!-- <label class="lab">Web :</label><br>
+	<input type="url" name="web" class="exf2" maxlength="50" size="50"></input><br> -->
+    <label class="lab">Image of Restaurant : </label><input type="file" name="img" multiple></input>
+	<br><hr>
+	
+	<span class="input input--nao">
+          <input class="input__field input__field--nao" type="number" id="input-1" name="num_tables" min="5" required  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Total Number of Tables</span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+	<!-- <label class="lab">Total Number of Tables :</label><br> 
+  <input type="number" name="num_tables" min="5" required><br> -->
+	<span class="input input--nao">
+          <input class="input__field input__field--nao" type="number" id="input-1" name="num_seats" min="2"  readonly onfocus="this.value=4"  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Number of Seats per tables</span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+    <!-- <label class="lab">Number of Seats per tables </label> <span class="star" > * </span>   : <br> 
+    <input type="number" name="num_seats" min="2" value="4" readonly><br> -->
+    
+    <span id="dec">******************************************************************************************</span>   <br>
+    <span class="input input--nao">
+          <input class="input__field input__field--nao" type="text" id="input-1" name="username" maxlength="50" size="30" required  />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">User Name </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+    		<!-- <label class="lab">User Name  <span class="star" > * </span>:</label><br>
+    		<input type="text" class="exf2" name="username" maxlength="50" size="30" required> <br> -->
+        <span class="input input--nao">
+          <input class="input__field input__field--nao" type="password" id="input-1" name="psd1" id="psd1" maxlength="50" size="30" pattern=".{8,}" required title="Too Short..!" />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Password </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+    		<!-- <label class="lab">Password  <span class="star" > * </span>:</label><br>
+    		<input type="password" class="exf2" name="psd1" id="psd1" maxlength="50" size="30" pattern=".{8,}" required title="Too Short..!"> <br> -->
+        <span class="input input--nao">
+          <input class="input__field input__field--nao" type="password" id="input-1" name="psd2" id="psd2" maxlength="50" size="30" pattern=".{8,}" required title="Too Short..!" />
+          <label class="input__label input__label--nao" for="input-1">
+            <span class="input__label-content input__label-content--nao">Confirm Password </span>
+          </label>
+          <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+            <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+          </svg>
+        </span><br>
+    		<!-- <label class="lab"> Confirm Password  <span class="star" > * </span>:</label><br>
+    		<input type="password" class="exf2" name="psd2" id="psd2" maxlength="50" size="30" pattern=".{8,}" required title="Too Short..!"> <br> -->
+        <input type="checkbox"  required><span class="rem"> Accept the terms and conditions</span></input><br>
+
+
+    	    <input class="butn" type="submit" value="Register" onsubmit="validation()" ></input><br>
+
+
+	</form>
+	</div>
+ </div>
+ <div id="ABOUT" class="win4">
+  <h3 class="sign">About us</h3><br><br>
+  <p id="abstract" align="justify">Ever had to wait for a table at a restaurant for too long? Or had to drive in an endless loop around the locality to park your car before dining out? The common problem of a diner is the unavailability of seats in a restaurant or the unavailability of parking slots. If one or both of these are unavailable, then the customer will have to look for another place to dine, making the whole process of finding an ideal place to dine out very cumbersome. Here’s a smart idea. The Smart Diner app is the solution to this menacing problem. This app gives you a graphical layout of the restaurant and shows the status of a table, whether it is available or occupied. If available, the customer can reserve the seats and a parking slot, subject to a timeline within which the customer should occupy the reserved seats. These real time changes get updated on the web interface at the restaurant. Each restaurant owner can register and provide their own graphical layout of the restaurant and the parking slot. The user must log in with a username or mobile number and password so that the identity of the diner is known.</p>
+   <br>
+   <div class="devolopers">
+   <h3 id="dev">Developers</h3>
+   
+      <div class="devimg" >
+   		  <img src="img/ajin.jpg" width="300" height="200">
+   		  <div class="desc">Ajin Pradeep</div>
+      </div>
+      <div class="devimg">
+   		  <img src="img/arjun.jpg" width="300" height="200">
+   		  <div class="desc">Arjun Nair</div>
+      </div>
+      <div class="devimg">
+   		  <img src="img/pratheek.jpg" width="300" height="200">
+   		  <div class="desc">Pratheek P</div>
+      </div>
+      <div class="devimg">
+   		  <img src="img/azhar.jpg" width="300" height="200">
+   		  <div class="desc">Mohammed Azhar</div>
+      </div>
+   </div>
+   
+    <footer class="foot">
+    <p class="footname">Copyright  &copy 2016</p>
+       
+    </footer>
+   </div> 
+    
+
+     <audio autoplay="">
+	 	   <source src="media/licensing-classical.MP3" type="audio/mpeg">
+	 	   <source src="media/licensing-classical.ogg" type="audio/ogg">
+	   </audio>
+   
+ <!--  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>  -->
+<script> function preloader(){
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }//preloader
+        window.onload = preloader;
+</script>
+</div>   <!-- CONTENT END-->
+<script src="js/classie.js"></script>
+          <script>
+      (function() {
+        // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+        if (!String.prototype.trim) {
+          (function() {
+            // Make sure we trim BOM and NBSP
+            var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+            String.prototype.trim = function() {
+              return this.replace(rtrim, '');
+            };
+          })();
+        }
+
+        [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+          // in case the input is already filled..
+          if( inputEl.value.trim() !== '' ) {
+            classie.add( inputEl.parentNode, 'input--filled' );
+          }
+
+          // events:
+          inputEl.addEventListener( 'focus', onInputFocus );
+          inputEl.addEventListener( 'blur', onInputBlur );
+        } );
+
+        function onInputFocus( ev ) {
+          classie.add( ev.target.parentNode, 'input--filled' );
+        }
+
+        function onInputBlur( ev ) {
+          if( ev.target.value.trim() === '' ) {
+            classie.remove( ev.target.parentNode, 'input--filled' );
+          }
+        }
+      })();
+    </script>
+	  </body>
+
+</html>       

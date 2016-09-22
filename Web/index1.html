@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<meta charset ="UTF-8">
+<head>
+
+<link rel="icon" href="img/app logo.ico" >
+<title> The smart Diner</title>
+<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/style1.css" >
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+<script src="js/status.js" type="text/javascript"></script>
+</head>
+
+ <body>
+ <div id="loading"></div>
+<div id="content">
+
+	<nav id="first" class="content">
+	<h3 id="rest_name"> [Restaurant Name] </h3>
+	<input id="btn" type="button" value="Sign Out" ></input>
+	</nav>
+
+
+    <h1 id="sign"> Reservation Status</h1>
+ <div id="container">
+
+  <table id="TSD">
+	<tr>
+	   <th>Table No </th>         <!--Dummy Values-->
+	   <th>Status</th>
+	   <th>Name of User</th>
+	   <th>Contact</th>
+	   <th>Time</th>
+	</tr> 
+	<tr>
+	   <td>1</td>
+	   <td>Reserved</td>
+	   <td>Akshay Sign</td>
+	   <td>9785457845</td>
+	   <td>10.30 AM</td>
+	</tr>
+	<tr>
+	   <td>2</td>
+	   <td>Reserved</td>
+	   <td>Jesy</td>
+	   <td>9985457742</td>
+	   <td>02.30 PM</td>
+	</tr>        
+	<tr>
+	   <td>3</td>
+	   <td>Reserved</td>
+	   <td>Anju John</td>
+	   <td>9785457785</td>
+	   <td>10.30 AM</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Reserved</td>
+		<td>Sasi</td>
+		<td>9400458721</td>
+		<td>11.30 AM</td>
+    </tr>  
+    <tr>
+		<td>5</td>
+		<td>Reserved</td>
+		<td>Ayana</td>
+		<td>9747548715</td>
+		<td>12.30 AM</td>
+    </tr>  
+    <tr>
+		<td>6</td>
+		<td>Reserved</td>
+		<td>Akbar</td>
+		<td>9895969591</td>
+		<td>03.30 AM</td>
+    </tr>  
+     <tr>
+		<td>7</td>
+		<td>Reserved</td>
+		<td></td>
+		<td></td>
+		<td></td>
+    </tr>  
+     <tr>
+		<td>8</td>
+		<td>Not Reserved</td>
+		<td></td>
+		<td></td>
+		<td></td>
+    </tr>  
+  </table>
+
+  </div><hr><hr>
+	<div id="admin">
+	  <span id="admn">  Admin</span><br>
+	  	<input type="number" placeholder="Tables for Smart diner" name="tab_no" onkeyup="TSD_tab(this.value)" ></input>
+		<input type="number" placeholder="Table No to delete" name="tab_del" style="float: right" onkeyup="DEL_tab(this.value)"></input>
+	</div><hr><hr>
+
+</div>
+<script type="text/javascript">function preloader(){
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("content").style.display = "block";
+        }//preloader
+        window.onload = preloader;</script>
+
+</body>
+
+
+</html>
